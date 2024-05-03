@@ -1,30 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfólio</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+  <header>
+    <nav>
+      <a>About me</a>
+      <a>Experiencie</a>
+      <a>Projects</a>
+      <a>Contact</a>
+    </nav>
 
-<select id="language-select">
-  <option value="en">English</option>
-  <option value="pt">Português</option>
-</select>
+    <div>
+      <label class="switch">
+        <input type="checkbox" id="checkDarkMode">
+        <span class="slider round"></span>
+      </label>
+  
+      <select id="language-select">
+        <option value="en">English</option>
+        <option value="pt">Português</option>
+      </select>
+    </div>
 
-<label class="switch">
-  <input type="checkbox" id="checkDarkMode">
-  <span class="slider round"></span>
-</label>
+  </header>
+  <main>
+    <section id="content">
+      <p id="title-en">I´m Thales Martim Coutinho, hands on webdeveloper,who is always seking to solve problems</p>
+      <h1 id="title-pt">Bem-vindo</h1>
+    </section>
+    <script src="script.js"></script>
 
-<div id="content">
-  <h1 id="title-en">Welcome</h1>
-  <h1 id="title-pt">Bem-vindo</h1>
-</div>
+  </main>
+  <footer>
 
-<script src="script.js"></script>
-
+  </footer>
 </body>
-</html>
 
+</html>
