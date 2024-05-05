@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   var userLanguage = navigator.language || navigator.userLanguage;
   var languagePrefix = userLanguage.substring(0, 2);
-  console.log(prefersDarkMode)
 
   if (languagePrefix === 'pt') {
     document.getElementById('language-select').value = 'pt';
@@ -16,9 +15,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (prefersDarkMode) {
     document.getElementById('checkDarkMode').checked = true;
+    document.documentElement.setAttribute('data-theme', 'dark');
   }
   else {
     document.getElementById('checkDarkMode').checked = false;
+    document.documentElement.setAttribute('data-theme', 'light');
   }
 });
 
