@@ -1,8 +1,15 @@
  :root {
    --primary-color: #032C55;
    --secondary-color: #ef6324;
-
+   --background-color: #F5F5F5;
+   --text-color: #101014;
  }
+
+ [data-theme="dark"] {
+   --background-color: #1f1f29;
+   --text-color: #F5F5F5;
+ }
+
 
  header {
    background-color: var(--primary-color);
@@ -14,7 +21,8 @@
 
  body {
    height: 100vh;
-   background-color: #1f1f29;
+   background-color: var(--background-color);
+   color: var(--text-color);
  }
 
  footer {

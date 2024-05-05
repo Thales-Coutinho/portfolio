@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/normalize.css">
 </head>
 
 <body>
@@ -19,11 +20,11 @@
 
     <div>
       <label class="switch">
-        <input type="checkbox" id="checkDarkMode">
+        <input type="checkbox" id="checkDarkMode"onchange="DarkModeChange()">
         <span class="slider round"></span>
       </label>
   
-      <select id="language-select">
+      <select id="language-select" onchange="languageChange()">
         <option value="en">English</option>
         <option value="pt">Português</option>
       </select>
@@ -33,7 +34,7 @@
   <main>
     <section id="content">
       <p id="title-en">I´m Thales Martim Coutinho, hands on webdeveloper,who is always seking to solve problems</p>
-      <h1 id="title-pt">Bem-vindo</h1>
+      <p id="title-pt">Bem-vindo</p>
     </section>
     <script src="script.js"></script>
 
