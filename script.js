@@ -5,12 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (languagePrefix === 'pt') {
     document.getElementById('language-select').value = 'pt';
-    document.getElementById('title-en').style.display = 'none';
-    document.getElementById('title-pt').style.display = 'block';
+    setLanguage('pt');
   } else {
     document.getElementById('language-select').value = 'en';
-    document.getElementById('title-en').style.display = 'block';
-    document.getElementById('title-pt').style.display = 'none';
+    setLanguage('en');
   }
 
   if (prefersDarkMode) {
@@ -25,12 +23,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function languageChange() {
   var language = document.getElementById('language-select').value;
+  setLanguage(language);
+}
+
+function setLanguage(language) {
+  var textEnElements = document.getElementsByClassName('text-en');
+  var textPtElements = document.getElementsByClassName('text-pt');
+  
   if (language === 'pt') {
-    document.getElementById('title-en').style.display = 'none';
-    document.getElementById('title-pt').style.display = 'block';
-  } else{
-    document.getElementById('title-en').style.display = 'block';
-    document.getElementById('title-pt').style.display = 'none';
+    for (var i = 0; i < textEnElements.length; i++) {
+      textEnElements[i].style.display = 'none';
+    }
+    for (var i = 0; i < textPtElements.length; i++) {
+      textPtElements[i].style.display = 'block';
+    }
+  } else {
+    for (var i = 0; i < textEnElements.length; i++) {
+      textEnElements[i].style.display = 'block';
+    }
+    for (var i = 0; i < textPtElements.length; i++) {
+      textPtElements[i].style.display = 'none';
+    }
   }
 }
 

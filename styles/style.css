@@ -21,7 +21,7 @@
  }
 
  header {
-  width: 100%;
+   width: 100%;
    background-color: var(--primary-color);
    color: #F5F5F5;
    display: flex;
@@ -29,21 +29,32 @@
    align-items: center;
    position: fixed;
    top: 0;
-   
+
  }
 
  #presentation {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 40px;
    background-color: var(--primary-color);
    color: #F5F5F5;
+   margin-top: 37px;
  }
- #contact{
-  background-color: var(--secondary-color);
-  color:#F5F5F5;
-  border:none;
-  border-radius: 20px;
-  height: 98px;
-  width: 300px;
-  font-size: 36px;
+
+ .contact {
+   background-color: var(--secondary-color);
+   color: #F5F5F5;
+   border: none;
+   border-radius: 20px;
+   height: 90px;
+   width: 250px;
+   font-size: 36px;
+ }
+
+ #profileImage {
+   border-radius: 50%;
+   border: 5px solid var(--secondary-color);
  }
 
 
